@@ -2,14 +2,18 @@ package baseball.domain;
 
 import baseball.global.util.RandomNumberGenerator;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Computer {
-    private final List<Integer> numbers;
+    private List<Integer> numbers;
 
     public Computer() {
-        this.numbers = RandomNumberGenerator.generateRandomNumber();
+        this.numbers = new ArrayList<>();
         /*이후 랜덤으로 숫자 생성하는 클래스 작성*/
+    }
+    public void generate() {
+        numbers = RandomNumberGenerator.generateRandomNumber();
     }
 
     public HintResult generateHintResult(List<Integer> givenNumbers) {
@@ -32,6 +36,5 @@ public class Computer {
         }
         return 0;
     }
-
 }
 
