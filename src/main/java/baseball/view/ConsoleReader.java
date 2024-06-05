@@ -1,6 +1,7 @@
 package baseball.view;
 
-import baseball.global.exception.BlankInputException;
+import baseball.global.exception.CustomException;
+import baseball.global.exception.ErrorMessage;
 import camp.nextstep.edu.missionutils.Console;
 
 public final class ConsoleReader {
@@ -16,7 +17,7 @@ public final class ConsoleReader {
 
         private static void validateBlankInput(String message) {
             if (message.isBlank()) {
-                throw new BlankInputException("Input cannot be blank");
+                throw CustomException.from(ErrorMessage.BLANK_INPUT_ERROR);
                 /*예외처리 메시지 필요*/
             }
         }
