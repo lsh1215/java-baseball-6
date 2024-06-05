@@ -1,5 +1,7 @@
 package baseball.domain;
 
+import baseball.global.util.RandomNumberGenerator;
+
 import java.util.List;
 
 public class Computer {
