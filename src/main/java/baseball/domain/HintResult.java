@@ -1,4 +1,4 @@
 package baseball.domain;
 
-public class HintResult {
+public record HintResult( int strike, int ball) {
 }
